@@ -7,7 +7,6 @@
 <p>{{id_input}}</p>
 <select [(ngModel)]="selected_pokemon">
     <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input" 
-         [ngValue]="p.id">{{p.id}}: {{p.nom}}</option>
-
-         
+         [ngValue]="p">{{p.id}}: {{p.nom}}</option>
 </select>
+<button (onclick)="handleClick()">Go !</button>

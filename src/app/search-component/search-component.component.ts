@@ -16,6 +16,9 @@ export class SearchComponentComponent {
     new Pokemon("5", "poke5"),
   ];
 
-selected_pokemon: any;
+  selected_pokemon: any;
 
+  handleClick() {
+    console.log("pokemon sélectionné: "+this.selected_pokemon.nom)
+  }
 }
