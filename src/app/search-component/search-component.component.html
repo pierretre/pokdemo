@@ -1,0 +1,13 @@
+<!-- <p>search-component works!</p> -->
+
+<label>
+    Id :
+    <input type="text" [(ngModel)]="id_input">
+</label>
+<p>{{id_input}}</p>
+<select [(ngModel)]="selected_pokemon">
+    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input" 
+         [ngValue]="p.id">{{p.id}}: {{p.nom}}</option>
+
+         
+</select>
