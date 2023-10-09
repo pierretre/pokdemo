@@ -1,0 +1,8 @@
+<div *ngIf="model !== undefined">
+    <h1>#{{model.id}}  {{model.name}}</h1>
+    <img [src]="model.sprites['front_default']" alt="">
+    <p>{{model.base_experience}}</p>
+    <ul>
+        <li *ngFor="let m of model.moves">{{m['move']['name']}}</li>
+    </ul>
+</div>

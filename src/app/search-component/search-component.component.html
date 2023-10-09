@@ -1,12 +1,20 @@
-<!-- <p>search-component works!</p> -->
-
 <label>
     Id :
     <input type="text" [(ngModel)]="id_input">
-</label>
-<p>{{id_input}}</p>
-<select [(ngModel)]="selected_pokemon">
-    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input" 
+</label><br/>
+<label>
+    Nom :
+    <input type="text" [(ngModel)]="name_input">
+</label><br/><br/>
+<!-- <select [(ngModel)]="selected_pokemon">
+    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
          [ngValue]="p">{{p.id}}: {{p.nom}}</option>
+</select> -->
+<select #pokemon (change)="onSelection($any($event.target).value)">
+    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
+         value="{{+p.id}}">{{p.id}}: {{p.nom}}</option>
 </select>
-<button (onclick)="handleClick()">Go !</button>
+<button (click)="handleClick()">Go !</button>
+<div *ngIf="selected_pokemon !== undefined">
+    <app-display-component></app-display-component>
+</div>
