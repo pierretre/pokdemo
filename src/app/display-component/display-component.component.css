@@ -7,3 +7,21 @@ div {
     border-color: black;
     background-color: beige;
 }
+
+.display-container {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+
+.height-weight-infos {
+    border: 2px black solid;
+    border-radius: 10x;
+    margin: 0 auto;
+}
+
+.height-weight-infos>h3 {
+    margin: 5px 70px;
+    background-color: red;
+}

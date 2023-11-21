@@ -27,12 +27,13 @@ export class SearchComponentComponent implements OnInit{
    */
   itemClicked(pokemon: Pokemon) {
     this.selected_pokemon_id = pokemon.id;
+    this.updatePokemonDisplayedOnClick();
   }
 
   /**
    * called when "Go !" clicked
    */
-  handleClick() {
+  updatePokemonDisplayedOnClick() {
     this.selectionService.setId(this.selected_pokemon_id); 
   }
 
@@ -43,9 +44,17 @@ export class SearchComponentComponent implements OnInit{
     this.api.getPokemons().subscribe((data: any) => {
       this.pokemon_list = data['pokemon_entries']
       .map((p: any) => new Pokemon(
-          p['entry_number'].toString().padStart(3, '0'), 
+          p['entry_number'], 
           p['pokemon_species']['name']
       ));
     });
+  }
+
+  /**
+   * @param id pokemon id
+   * @returns a 4 digits representation of the id
+   */
+  getIdRepresentation(id: number) : string {
+    return id.toString().padStart(4, '0');
   }
 }

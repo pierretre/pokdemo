@@ -5,20 +5,24 @@ import { AppComponent } from './app.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FilterPokemonPipePipe } from './pipes/filter-pokemon--pipe.pipe';
+import { FilterPokemonPipe } from './pipes/filter-search-pokemon.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PokeApiService } from './services/poke-api.service';
 import { DisplayComponentComponent } from './display-component/display-component.component';
 import { PokeSelectionService } from './services/poke-selection.service';
 import { PokeSelectorComponent } from './poke-selector/poke-selector.component';
+import { WeightConvertKgPipe } from './pipes/weight-convert-kg.pipe';
+import { HeightConvertMeterPipe } from './pipes/height-convert-meter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponentComponent,
-    FilterPokemonPipePipe,
+    FilterPokemonPipe,
     DisplayComponentComponent,
-    PokeSelectorComponent
+    PokeSelectorComponent,
+    WeightConvertKgPipe,
+    HeightConvertMeterPipe
   ],
   imports: [
     BrowserModule,

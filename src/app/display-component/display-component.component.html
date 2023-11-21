@@ -1,10 +1,29 @@
-<div *ngIf="model !== undefined">
-    <div class="pok-header">
+<div *ngIf="model !== undefined" class="display-container">
+    <h1>#{{model.id}}  {{model.name}}</h1>
+    <div class="top-part">
+        <div class="front-image">
+            <img [src]="model.sprites['front_default']" alt="">
+        </div>
+        <div class="infos">
+            <div class="height-weight-infos">
+                <h3>HT⠀⠀⠀{{model.height | heightConvertMeter}}</h3>
+                <h3>WT⠀⠀⠀{{model.weight | weightConvertKg}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-- <div>
+        {{model | json}}
+    </div> -->
+
+
+    <!-- <div class="pok-header">
         <h1>#{{model.id}}  {{model.name}}</h1>
         <img [src]="model.sprites['front_default']" alt="">
     </div>
     <p>{{model.base_experience}}</p>
     <ul>
         <li *ngFor="let m of model.moves">{{m['move']['name']}}</li>
-    </ul>
+    </ul> -->
+    <div class="bottom-part">
+    </div>
 </div>
