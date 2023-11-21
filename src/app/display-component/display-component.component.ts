@@ -18,6 +18,9 @@ export class DisplayComponentComponent implements OnInit {
   ngOnInit(): void {
     // subscribe to the service observable
     this.selectedService.getId().subscribe((value) => this.handleIdChange(value))
+    // TODO
+
+    this.selectedService.setId(1);
   }
 
   /**

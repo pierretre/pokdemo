@@ -21,7 +21,7 @@
                 [value]="pokemon.id"
                 style="display: none;"
                 />
-                <label style="cursor: pointer;">{{getIdRepresentation(pokemon.id)}}⠀⠀{{pokemon.nom}}</label>
+                <label style="cursor: pointer;">{{pokemon.id | idConvert}}⠀⠀{{pokemon.nom}}</label>
             </div>
         </div>
     <!-- <button [disabled]="selected_pokemon_id === undefined" (click)="handleClick()">Go !</button> -->

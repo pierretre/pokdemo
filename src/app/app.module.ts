@@ -13,6 +13,7 @@ import { PokeSelectionService } from './services/poke-selection.service';
 import { PokeSelectorComponent } from './poke-selector/poke-selector.component';
 import { WeightConvertKgPipe } from './pipes/weight-convert-kg.pipe';
 import { HeightConvertMeterPipe } from './pipes/height-convert-meter.pipe';
+import { IdConvertPipe } from './pipes/id-convert.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeightConvertMeterPipe } from './pipes/height-convert-meter.pipe';
     DisplayComponentComponent,
     PokeSelectorComponent,
     WeightConvertKgPipe,
-    HeightConvertMeterPipe
+    HeightConvertMeterPipe,
+    IdConvertPipe
   ],
   imports: [
     BrowserModule,

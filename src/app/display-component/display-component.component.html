@@ -1,29 +1,24 @@
 <div *ngIf="model !== undefined" class="display-container">
-    <h1>#{{model.id}}  {{model.name}}</h1>
+    <h1 class="bordered">{{model.id | idConvert}}⠀⠀{{model.name}}</h1>
     <div class="top-part">
-        <div class="front-image">
-            <img [src]="model.sprites['front_default']" alt="">
-        </div>
+        <img class="front-img" [src]="model.sprites['front_default']" alt="">
         <div class="infos">
-            <div class="height-weight-infos">
+            <div class="types">
+                <div *ngFor="let type of model.types" class="type-card bordered">
+                    <img [src]="'/assets/types/gen8/' + type.type.name + '.png'" 
+                        class="type-img"
+                        [alt]="'logo type '+type.type.name"
+                        [title]="'type '+type.type.name">    
+                    <p>{{type.type.name}}</p>
+                </div>      
+            </div>            
+            <div class="height-weight-infos bordered">
                 <h3>HT⠀⠀⠀{{model.height | heightConvertMeter}}</h3>
+                <div class="separator"></div>
                 <h3>WT⠀⠀⠀{{model.weight | weightConvertKg}}</h3>
             </div>
         </div>
     </div>
-    <!-- <div>
-        {{model | json}}
-    </div> -->
-
-
-    <!-- <div class="pok-header">
-        <h1>#{{model.id}}  {{model.name}}</h1>
-        <img [src]="model.sprites['front_default']" alt="">
-    </div>
-    <p>{{model.base_experience}}</p>
-    <ul>
-        <li *ngFor="let m of model.moves">{{m['move']['name']}}</li>
-    </ul> -->
     <div class="bottom-part">
     </div>
 </div>

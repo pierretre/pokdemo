@@ -9,6 +9,8 @@ export class PokeSelectionService {
   private _id = new BehaviorSubject<number>(-1);
   readonly id = this._id.asObservable();
   
+  
+
   /**
    * @returns an observable on the id
    */

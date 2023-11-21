@@ -46,7 +46,7 @@ Changez le template *app-component.html* en remplaçant le code du template par 
    {{ title }}!
   </h1>
 </div>
-```
+``` 
 
 
 ## Step 2: Recherche d'un pokémon via son numéro

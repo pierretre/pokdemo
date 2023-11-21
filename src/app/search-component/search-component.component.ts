@@ -49,12 +49,4 @@ export class SearchComponentComponent implements OnInit{
       ));
     });
   }
-
-  /**
-   * @param id pokemon id
-   * @returns a 4 digits representation of the id
-   */
-  getIdRepresentation(id: number) : string {
-    return id.toString().padStart(4, '0');
-  }
 }
