@@ -8,20 +8,20 @@ import { Observable } from 'rxjs';
 })
 export class PokeApiService {
 
+  // the api url
   url = 'https://pokeapi.co/api/v2/';
 
   constructor(private http: HttpClient) { }
 
   /**
-   * @param param 
-   * @returns the list of pokemons
+   * @returns an observable on the list of pokemons
    */
-  getPokemons(): Observable<Pokemon> {
-    return this.http.get<Pokemon>(this.url + 'pokedex/1');
+  getPokemons(): Observable<any> {
+    return this.http.get<any>(this.url + 'pokedex/1');
   } 
 
   /**
-   * @param id 
+   * @param id, the id of the pokemon to get informations for
    * @returns Pokemon informations
    */
   getPokemonDetails(id: number): Observable<Pokemon> {

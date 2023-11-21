@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PokeApiService } from './services/poke-api.service';
 import { DisplayComponentComponent } from './display-component/display-component.component';
 import { PokeSelectionService } from './services/poke-selection.service';
+import { PokeSelectorComponent } from './poke-selector/poke-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponentComponent,
     FilterPokemonPipePipe,
-    DisplayComponentComponent
+    DisplayComponentComponent,
+    PokeSelectorComponent
   ],
   imports: [
     BrowserModule,

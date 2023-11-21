@@ -1,7 +1,5 @@
 # Sujet de TP Angular 
 
-![](https://github.com/barais/teaching-jxs-angular/raw/master/img/banner.png)
-
 Votre aventure dans le monde merveilleux des frameworks JavaScript commence avec Angular.
 
 Angular est un framework développé par Google. Ce framework se base principalement sur la définition de composants et de services. L'objectif est d'avoir un code modulaire et réutilisable. Le langage recommandé pour programmer avec Angular et celui que nous allons utiliser est Typescript. On

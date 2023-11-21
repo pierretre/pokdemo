@@ -2,3 +2,8 @@ img{
     width: 10%;
     height: 10%;
 }
+div {
+    border: 20px ;
+    border-color: black;
+    background-color: beige;
+}

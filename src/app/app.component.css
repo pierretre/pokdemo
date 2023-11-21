@@ -1,0 +1,82 @@
+.main-app {
+    text-align: center;    
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.top-container {
+    flex: 2;
+    display: flex;
+    background: linear-gradient(
+        to bottom,
+        rgb(245, 0, 0) 50%,
+        rgb(145, 12, 12) 50% 80%,
+        rgb(68, 10, 10) 80% 95%, 
+        rgb(26, 7, 7) 95%
+    ); 
+    align-items: center;
+}
+
+h1 {
+    margin: 0 auto;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 400%;
+    color: beige;
+    text-shadow: -3px -3px rgba(0, 0, 0, 0.712), 0 0 black, -10px 10px black, 0 0 black;
+}
+
+.body-container {
+    flex: 5;
+    -webkit-box-shadow: inset 0px 0px 58px -12px rgba(0,0,0,0.72);
+    -moz-box-shadow: inset 0px 0px 58px -12px rgba(0,0,0,0.72);
+    box-shadow: inset 0px 0px 58px -12px rgba(0,0,0,0.72);
+    padding: 24px;
+    height: 63%;
+}
+
+.centered-container {
+    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    min-width: inherit;
+    max-width: 1000px;
+    height: 100%;
+}
+
+.bordered {
+    border: 4px rgba(0, 0, 0, 0.938) solid;
+    border-radius: 15px;
+}
+
+.left-part {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.right-part {
+    flex: 3;
+}
+
+.bottom-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        to bottom,
+        rgb(26, 7, 7) 5%,
+        rgb(220, 5, 5) 5% 15%,
+        rgb(245, 0, 0) 15% 60%,
+        rgb(145, 12, 12) 60% 85%,
+        rgb(68, 10, 10) 85%
+    ); 
+    padding: 0 50px 0 50px;
+}
+
+h4 { 
+    color: beige;
+    text-shadow: 0 0 black, 0 0 black, -2px 2px black, 0 0 black;
+}

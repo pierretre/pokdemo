@@ -1,20 +1,28 @@
-<label>
-    Id :
-    <input type="text" [(ngModel)]="id_input">
-</label><br/>
-<label>
-    Nom :
-    <input type="text" [(ngModel)]="name_input">
-</label><br/><br/>
-<!-- <select [(ngModel)]="selected_pokemon">
-    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
-         [ngValue]="p">{{p.id}}: {{p.nom}}</option>
-</select> -->
-<select #pokemon (change)="onSelection($any($event.target).value)">
-    <option *ngFor="let p of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
-         value="{{+p.id}}">{{p.id}}: {{p.nom}}</option>
-</select>
-<button (click)="handleClick()">Go !</button>
-<div *ngIf="selected_pokemon !== undefined">
-    <app-display-component></app-display-component>
+<div class="search-container">
+    <div class="poke-filters">
+        <label>     
+            Id :
+            <input type="text" [(ngModel)]="id_input">
+        </label>
+        <label>
+            Nom :
+            <input type="text" [(ngModel)]="name_input">
+        </label>
+    </div>
+        <div class="poke-selector">
+            <div 
+            *ngFor="let pokemon of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
+            (click)="itemClicked(pokemon)"
+            class="poke-option"
+            [class.selected]="pokemon.id === selected_pokemon_id">
+                <input
+                type="radio"
+                name="selectedItem"
+                [value]="pokemon.id"
+                style="display: none;"
+                />
+                <label style="cursor: pointer;">{{pokemon.id }}⠀⠀{{pokemon.nom}}</label>
+            </div>
+        </div>
+    <!-- <button [disabled]="selected_pokemon_id === undefined" (click)="handleClick()">Go !</button> -->
 </div>

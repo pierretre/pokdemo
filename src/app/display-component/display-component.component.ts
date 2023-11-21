@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PokeModel } from '../models/pokeModel';
 import { PokeSelectionService } from '../services/poke-selection.service';
 import { PokeApiService } from '../services/poke-api.service';
@@ -10,18 +10,25 @@ import { PokeApiService } from '../services/poke-api.service';
 })
 export class DisplayComponentComponent implements OnInit {
   
+  // the Pokemon displayed 
   model: PokeModel | undefined;
 
   constructor(private api: PokeApiService, private selectedService: PokeSelectionService) {}
   
   ngOnInit(): void {
-    this.selectedService.getObservable().subscribe((value) => this.handleIdChange(value))
+    // subscribe to the service observable
+    this.selectedService.getId().subscribe((value) => this.handleIdChange(value))
   }
 
+  /**
+   * called when the Observable updates
+   * @param value the new value
+   */
   handleIdChange(value: number): void {
-    this.api.getPokemonDetails(value).subscribe((data: any) => {
-      this.model = data;
-      console.log(data)
-    });
+    if(value !== -1) {
+      this.api.getPokemonDetails(value).subscribe((data: any) => {
+        this.model = data;
+      });
+    }
   }
 }

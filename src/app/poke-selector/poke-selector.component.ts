@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Pokemon } from '../models/pokemon';
+import { Component } from '@angular/core';
 import { PokeApiService } from '../services/poke-api.service';
 import { PokeSelectionService } from '../services/poke-selection.service';
+import { Pokemon } from '../models/pokemon';
 
 @Component({
-  selector: 'app-search-component',
-  templateUrl: './search-component.component.html',
-  styleUrls: ['./search-component.component.css']
+  selector: 'app-poke-selector',
+  templateUrl: './poke-selector.component.html',
+  styleUrls: ['./poke-selector.component.css']
 })
-export class SearchComponentComponent implements OnInit{
+export class PokeSelectorComponent {
 
   id_input : string = "";
   name_input : string = "";
@@ -22,14 +22,6 @@ export class SearchComponentComponent implements OnInit{
   }  
 
   /**
-   * When pokemon item clicked in the list
-   * @param pokemon 
-   */
-  itemClicked(pokemon: Pokemon) {
-    this.selected_pokemon_id = pokemon.id;
-  }
-
-  /**
    * called when "Go !" clicked
    */
   handleClick() {
@@ -41,11 +33,7 @@ export class SearchComponentComponent implements OnInit{
    */
   retrievePokemonList() {
     this.api.getPokemons().subscribe((data: any) => {
-      this.pokemon_list = data['pokemon_entries']
-      .map((p: any) => new Pokemon(
-          p['entry_number'].toString().padStart(3, '0'), 
-          p['pokemon_species']['name']
-      ));
+      this.pokemon_list = data['pokemon_entries'].map((p: any) => new Pokemon(p['entry_number'], p['pokemon_species']['name']));
     });
   }
 }
