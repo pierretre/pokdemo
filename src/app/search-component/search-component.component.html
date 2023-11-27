@@ -12,7 +12,7 @@
         <div class="poke-selector">
             <div 
             *ngFor="let pokemon of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
-            (click)="itemClicked(pokemon)"
+            (click)="updatePokemonDisplayedOnClick(pokemon)"
             class="poke-option"
             [class.selected]="pokemon.id === selected_pokemon_id">
                 <input

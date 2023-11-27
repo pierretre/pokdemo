@@ -19,21 +19,15 @@ export class SearchComponentComponent implements OnInit{
 
   ngOnInit(): void {
     this.retrievePokemonList();
+    this.updatePokemonDisplayedOnClick(this.pokemon_list[1]);
   }  
 
   /**
    * When pokemon item clicked in the list
    * @param pokemon 
    */
-  itemClicked(pokemon: Pokemon) {
+  updatePokemonDisplayedOnClick(pokemon: Pokemon) {
     this.selected_pokemon_id = pokemon.id;
-    this.updatePokemonDisplayedOnClick();
-  }
-
-  /**
-   * called when "Go !" clicked
-   */
-  updatePokemonDisplayedOnClick() {
     this.selectionService.setId(this.selected_pokemon_id); 
   }
 

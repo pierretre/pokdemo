@@ -1,7 +1,7 @@
 .display-container { 
     display: flex;
     width: 100%;
-    gap: 24px;
+    gap: 16px;
 }
 
 h1 {
@@ -23,14 +23,15 @@ h1 {
 }
 
 .top-part {
+    flex: 4;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     gap: 16px;
 }
+
 .bottom-part {
-    height: 100%;
-    background-color: yellow;
+    margin: 0 auto;
 }
 
 .display-container {
@@ -38,23 +39,13 @@ h1 {
     flex-direction: column;
     width: 100%;
     height: 100%;  
-
 }
-
-.height-weight-infos { }
 
 .height-weight-infos>h3 {
     margin: 5px 70px;
 }
+
 .separator {
-    /* content: "";
-    background-color: #000;
-    position: sticky;
-    width: 500px;
-    height: 5px;
-    top: 10px;
-    left: 50%;
-    display: block; */
     border-bottom: 3px black dashed;
 }
 
@@ -63,24 +54,45 @@ h1 {
 }
 
 .infos {
-    flex: 4;
+    flex: 5;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
 .type-img {
-    width: 30%;
-    height: 30%;
+    width: 25%;
 }
 
 .types {
-    /* display: flex; */
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
 }
+
 .type-card {
     display: flex;
     gap: 8px;
+    height: auto;
     flex-direction: row;
     width: 40%;
+    height: 60%;
     align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* stats */
+th,
+td {
+  padding: 0 10px;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(210, 0, 0, 0.8);
+  }
+tbody tr:nth-child(even) {
+    background-color: rgba(231, 127, 127, 0.8);
 }

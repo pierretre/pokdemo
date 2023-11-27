@@ -20,5 +20,15 @@
         </div>
     </div>
     <div class="bottom-part">
+        <table>
+            <thead>
+                <tr><th>statistic</th><th>value</th></tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stat of model.stats" class="stat-line">
+                    <td>{{stat.stat.name}}</td><td>{{stat.base_stat}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

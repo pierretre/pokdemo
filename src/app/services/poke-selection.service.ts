@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +8,6 @@ export class PokeSelectionService {
 
   private _id = new BehaviorSubject<number>(-1);
   readonly id = this._id.asObservable();
-  
-  
 
   /**
    * @returns an observable on the id
@@ -23,7 +21,6 @@ export class PokeSelectionService {
    * @param id the value of the new id
    */
   setId(id: number) {
-    console.log("id updated to "+id)
     this._id.next(id);
   }
 }
