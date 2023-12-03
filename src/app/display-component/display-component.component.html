@@ -1,4 +1,4 @@
-<div *ngIf="model !== undefined" class="display-container">
+<div *ngIf="model !== undefined;else error" class="display-container">
     <h1 class="bordered">{{model.id | idConvert}}⠀⠀{{model.name}}</h1>
     <div class="top-part">
         <img class="front-img" [src]="model.sprites['front_default']" alt="">
@@ -32,3 +32,6 @@
         </table>
     </div>
 </div>
+<ng-template #error class="display-container">
+    <h3>Error, couldn't fetch the pokemeon informations</h3>
+</ng-template>

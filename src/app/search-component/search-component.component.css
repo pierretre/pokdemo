@@ -1,18 +1,12 @@
 .search-container {
     display: flex;
     flex-direction: column;
-    max-height: 100%;
-}
-
-.poke-filters {
-    flex: 1;
+    height: 100%;
 }
 
 .poke-selector {
-    margin: 20px 5px 20px 5px;
+    margin: 5px;
     padding: 10px;
-    flex: 10;
-    display: flex;
     flex-direction: column;
     overflow-y: scroll;
 }
@@ -23,6 +17,7 @@
     cursor: pointer;
     text-align: left;
 }
+
 .poke-option:hover {
     cursor: pointer;
     background-color: rgba(168, 39, 39, 0.5);
@@ -34,4 +29,5 @@
     margin-left: 3px;
     border-radius: 5px;
     background-color: rgba(206, 37, 37, 0.795);
+    box-shadow: -3px 5px 3px rgba(0, 0, 0, 0.3);
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { Pokemon } from '../models/pokemon';
 import { PokeApiService } from '../services/poke-api.service';
 import { PokeSelectionService } from '../services/poke-selection.service';
@@ -19,7 +21,6 @@ export class SearchComponentComponent implements OnInit{
 
   ngOnInit(): void {
     this.retrievePokemonList();
-    this.updatePokemonDisplayedOnClick(this.pokemon_list[1]);
   }  
 
   /**
@@ -41,6 +42,7 @@ export class SearchComponentComponent implements OnInit{
           p['entry_number'], 
           p['pokemon_species']['name']
       ));
+      this.updatePokemonDisplayedOnClick(this.pokemon_list[0]);
     });
   }
 }

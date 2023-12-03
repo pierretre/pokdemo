@@ -13,6 +13,8 @@ import { PokeSelectionService } from './services/poke-selection.service';
 import { WeightConvertKgPipe } from './pipes/weight-convert-kg.pipe';
 import { HeightConvertMeterPipe } from './pipes/height-convert-meter.pipe';
 import { IdConvertPipe } from './pipes/id-convert.pipe';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { IdConvertPipe } from './pipes/id-convert.pipe';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [
     PokeApiService,
