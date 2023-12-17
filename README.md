@@ -1,15 +1,22 @@
-
 # Pokedex Angular
 
 Project of pokedex to test the Angular Framework.
-Author : Pierre Treton
+######
+**Author :** Pierre Treton
 
-// TODO
 ![alt text](./UI.png)
 
-[EN]
+## [EN]
 
-## Functionalities
+### Project install
+
+* Clone this repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
+* Move to the project folder : `cd tp_web_angular`
+* Install depedencies : `npm i`
+* Launch local project : `ng serve`
+* Open in browser : [localhost:4200](http://localhost:4200)
+
+### Functionalities
 
 * Retrieve all pokemons as a list using API request (Q10-Q11-Q12)
 * Display the complete pokemon list in the app (Q5-Q6)
@@ -18,7 +25,7 @@ Author : Pierre Treton
 * Request detailled infos about the selected pokemon using a service that makes an API call, then updates pokemon informations on selection change (Q13)
 * Display pokemon informations in a dedicated component that subscribe to the service to be receive newest pokemon details on selection updated (Q14-Q15-Q16)
 
-## Taken liberties
+### Taken liberties
 
 In order to improve UI and UX, I chose to implements certain things a different way:
 
@@ -27,9 +34,17 @@ In order to improve UI and UX, I chose to implements certain things a different 
 * The select element was replaced by a list that fills the page's height with a scroll so ther is less clicks in the process
 * The "Go" button was removes to allow pokemon infos display directly when an element is selected in the pokemon list. This, paired with the aformentioned list really enhance the user experience
 
-[FR]
+## [FR]
 
-## Fonctionnalités
+### Installation du projet
+
+* Cloner ce repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
+* Se déplacer dans le dossier projet : `cd tp_web_angular`
+* Installer les dépendances : `npm i`
+* Lancer le projet en local : `ng serve`
+* Ouvrir l'url indiqué dans le navigateur : [localhost:4200](http://localhost:4200)
+
+### Fonctionnalités
 
 * Récupération de tous les pokémons via requête API (Q10-Q11-Q12)
 * Affichage de la liste complète des pokémons (Q5-Q6)
@@ -38,7 +53,7 @@ In order to improve UI and UX, I chose to implements certain things a different 
 * Requête API des infos détaillées du Pokémon sélectionné via un service qui met à jour les informations lorsque la sélection change (Q13)
 * Affichage des informations du pokémon dans un composant dédié; Ce composant s'abonne au service qui reçoit la mise à jour lors de la sélection (Q14-Q15-Q16)
 
-## Liberté prises
+### Libertés prises
 
 Afin de rendre l'UI/UX plus agréable, j'ai fait le choix de modifier certains aspects de l'application:
 
