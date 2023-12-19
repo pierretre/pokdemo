@@ -9,6 +9,14 @@ Project of pokedex to test the Angular Framework.
 
 ## [EN]
 
+### Project install
+
+* Clone this repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
+* Move to the project folder : `cd tp_web_angular`
+* Install depedencies : `npm i`
+* Launch local project : `ng serve`
+* Open in browser : [localhost:4200](http://localhost:4200)
+
 ### Functionalities
 
 * Retrieve all pokemons as a list using API request (Q10-Q11-Q12)
@@ -28,6 +36,15 @@ In order to improve UI and UX, I chose to implements certain things a different 
 * The "Go" button was removes to allow pokemon infos display directly when an element is selected in the pokemon list. This, paired with the aformentioned list really enhance the user experience
 
 ## [FR]
+
+### Installation du projet
+
+* Cloner ce repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
+* Se déplacer dans le dossier projet : `cd tp_web_angular`
+* Installer les dépendances : `npm i`
+* Lancer le projet en local : `ng serve`
+* Ouvrir l'url indiqué dans le navigateur : [localhost:4200](http://localhost:4200)
+
 
 ### Fonctionnalités
 
