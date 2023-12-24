@@ -7,22 +7,20 @@
         <label>
             Nom :
             <input type="text" [(ngModel)]="name_input">
-        </label>
+        </label>        
     </div>
-        <div class="poke-selector">
-            <div 
-            *ngFor="let pokemon of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
-            (click)="updatePokemonDisplayedOnClick(pokemon)"
-            class="poke-option"
-            [class.selected]="pokemon.id === selected_pokemon_id">
-                <input
-                type="radio"
-                name="selectedItem"
-                [value]="pokemon.id"
-                style="display: none;"
-                />
-                <label style="cursor: pointer;">{{pokemon.id | idConvert}}⠀⠀{{pokemon.nom}}</label>
-            </div>
+    <div class="poke-selector">
+        <div 
+        *ngFor="let pokemon of pokemon_list | filterPokemonPipe : 'id' : id_input | filterPokemonPipe : 'nom' : name_input" 
+        (click)="updatePokemonDisplayedOnClick(pokemon)"
+        class="poke-option"
+        [class.selected]="pokemon.id === selected_pokemon_id">
+            <input
+            type="radio"
+            name="selectedItem"
+            [value]="pokemon.id"
+            style="display: none"/>
+            <label style="cursor: pointer;">{{pokemon.id | idConvert}}⠀⠀{{pokemon.nom}}</label>
         </div>
-    <!-- <button [disabled]="selected_pokemon_id === undefined" (click)="handleClick()">Go !</button> -->
+    </div>
 </div>

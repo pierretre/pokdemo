@@ -19,7 +19,6 @@ export class SearchComponentComponent implements OnInit{
 
   ngOnInit(): void {
     this.retrievePokemonList();
-    this.updatePokemonDisplayedOnClick(this.pokemon_list[1]);
   }  
 
   /**
@@ -41,6 +40,7 @@ export class SearchComponentComponent implements OnInit{
           p['entry_number'], 
           p['pokemon_species']['name']
       ));
+      this.updatePokemonDisplayedOnClick(this.pokemon_list[0]);
     });
   }
 }
