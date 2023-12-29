@@ -23,7 +23,7 @@ export class DisplayComponentComponent implements OnInit {
   ngOnInit(): void {
     // subscribe to the service observable
     this.loading = true;
-    setTimeout(() => this.loading = false, 1000);
+    setTimeout(() => this.loading = false, 2000);
     this.selectedService.id.subscribe((value) => this.handleIdChange(value))
   }
 
@@ -34,7 +34,7 @@ export class DisplayComponentComponent implements OnInit {
   handleIdChange(value: number): void {
     this.model = undefined;
     this.loading = true;
-    setTimeout(() => this.loading = false, 1000);
+    setTimeout(() => this.loading = false, 2000);
     if(value !== -1) {  
       this.api.getPokemonDetails(value).subscribe((data: any) => {
         this.model = data;
