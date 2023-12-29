@@ -15,7 +15,8 @@
     align-self: flex-start;
     width: 95%;
     cursor: pointer;
-    text-align: left;
+    text-align: left;    
+    padding-left: 5px;
 }
 
 .poke-option:hover {
