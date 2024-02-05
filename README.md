@@ -1,7 +1,8 @@
 # Pokedex Angular
 
 **Description :**
-Project of pokedex to test the Angular Framework.
+Project of pokedex to test the Angular Framework and showcase integration of an echarts web component.
+
 ######
 **Author :** Pierre Treton
 
@@ -63,4 +64,3 @@ Afin de rendre l'UI/UX plus agréable, j'ai fait le choix de modifier certains a
 * Quand l'application est chargée, le premier pokemon de la liste est sélectionné et ses informations sont affichés, afin d'éviter un affichage qui dit à l'utilisateur de faie son choix
 * Le select a été remplacé par une liste qui fait la hauteur de la page afin de simplifier son utilisation
 * Le bouton "Go" a été enlevé pour permettre l'affichage du pokémon sélectionné directement lorsqu'il est sélectionné dans la liste, ceci améliore grandement avec le précédent point l'expérience utilisateur
-

@@ -1,15 +1,13 @@
 <div class="search-container">
     <div class="poke-filters">
-        <!-- Material UI elements : -->
-        <mat-form-field style="width: 100%;">
-            <mat-label>Filter id</mat-label>
-            <input matInput placeholder="Ex. 1" [(ngModel)]="id_input">
-        </mat-form-field>
-    
-        <mat-form-field style="width: 100%;">
-            <mat-label>Filter name</mat-label>
-            <input matInput placeholder="Ex. Bulbausaur" [(ngModel)]="name_input">
-        </mat-form-field>
+        <label>     
+            Id :
+            <input type="text" [(ngModel)]="id_input">
+        </label>
+        <label>
+            Nom :
+            <input type="text" [(ngModel)]="name_input">
+        </label>        
     </div>
     <div class="poke-selector">
         <div 
@@ -21,10 +19,8 @@
             type="radio"
             name="selectedItem"
             [value]="pokemon.id"
-            style="display: none;"
-            />
+            style="display: none"/>
             <label style="cursor: pointer;">{{pokemon.id | idConvert}}⠀⠀{{pokemon.nom}}</label>
         </div>
     </div>
-    <!-- <button [disabled]="selected_pokemon_id === undefined" (click)="handleClick()">Go !</button> -->
 </div>
