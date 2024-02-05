@@ -12,8 +12,8 @@ Project of pokedex to test the Angular Framework and showcase integration of an 
 
 ### Project install
 
-* Clone this repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
-* Move to the project folder : `cd tp_web_angular`
+* Clone this repo : `git clone https://github.com/pierretre/pokdemo.git`
+* Move to the project folder : `cd pokdemo`
 * Install depedencies : `npm i`
 * Launch local project : `ng serve`
 * Open in browser : [localhost:4200](http://localhost:4200)
@@ -40,8 +40,8 @@ In order to improve UI and UX, I chose to implements certain things a different 
 
 ### Installation du projet
 
-* Cloner ce repo : `git clone https://gitlab.istic.univ-rennes1.fr/ptreton/tp_web_angular.git`
-* Se déplacer dans le dossier projet : `cd tp_web_angular`
+* Cloner ce repo : `git clone https://github.com/pierretre/pokdemo.git`
+* Se déplacer dans le dossier projet : `cd pokdemo`
 * Installer les dépendances : `npm i`
 * Lancer le projet en local : `ng serve`
 * Ouvrir l'url indiqué dans le navigateur : [localhost:4200](http://localhost:4200)
