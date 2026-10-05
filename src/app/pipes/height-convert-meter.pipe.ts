@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'heightConvertMeter'
+    name: 'heightConvertMeter',
+    standalone: false
 })
 export class HeightConvertMeterPipe implements PipeTransform {
   transform(value: any, ...args: unknown[]): string {

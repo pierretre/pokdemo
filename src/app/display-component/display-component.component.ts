@@ -4,9 +4,10 @@ import { PokeSelectionService } from '../services/poke-selection.service';
 import { PokeApiService } from '../services/poke-api.service';
 
 @Component({
-  selector: 'app-display-component',
-  templateUrl: './display-component.component.html',
-  styleUrls: ['./display-component.component.css']
+    selector: 'app-display-component',
+    templateUrl: './display-component.component.html',
+    styleUrls: ['./display-component.component.css'],
+    standalone: false
 })
 export class DisplayComponentComponent implements OnInit {
   

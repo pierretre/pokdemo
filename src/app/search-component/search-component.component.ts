@@ -6,9 +6,10 @@ import { PokeApiService } from '../services/poke-api.service';
 import { PokeSelectionService } from '../services/poke-selection.service';
 
 @Component({
-  selector: 'app-search-component',
-  templateUrl: './search-component.component.html',
-  styleUrls: ['./search-component.component.css']
+    selector: 'app-search-component',
+    templateUrl: './search-component.component.html',
+    styleUrls: ['./search-component.component.css'],
+    standalone: false
 })
 export class SearchComponentComponent implements OnInit{
 

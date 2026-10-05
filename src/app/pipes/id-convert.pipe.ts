@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'idConvert'
+    name: 'idConvert',
+    standalone: false
 })
 export class IdConvertPipe implements PipeTransform {
   transform(value: any, ...args: unknown[]): string {
