@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Pokemon } from '../models/pokemon';
@@ -9,6 +9,7 @@ import { PokeSelectionService } from '../services/poke-selection.service';
     selector: 'app-search-component',
     templateUrl: './search-component.component.html',
     styleUrls: ['./search-component.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SearchComponentComponent implements OnInit{

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 import { FilterPokemonPipe } from './pipes/filter-search-pokemon.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PokeApiService } from './services/poke-api.service';
@@ -33,6 +33,6 @@ import * as echarts from 'echarts';
         })], providers: [
         PokeApiService,
         PokeSelectionService,
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withXhr(), withInterceptorsFromDi())
     ] })
 export class AppModule { }

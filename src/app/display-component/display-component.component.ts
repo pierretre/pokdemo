@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { PokeModel } from '../models/pokeModel';
 import { PokeSelectionService } from '../services/poke-selection.service';
 import { PokeApiService } from '../services/poke-api.service';
@@ -7,6 +7,7 @@ import { PokeApiService } from '../services/poke-api.service';
     selector: 'app-display-component',
     templateUrl: './display-component.component.html',
     styleUrls: ['./display-component.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DisplayComponentComponent implements OnInit {
