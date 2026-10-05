@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FilterPokemonPipe } from './pipes/filter-search-pokemon.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { PokeApiService } from './services/poke-api.service';
@@ -15,30 +15,24 @@ import { IdConvertPipe } from './pipes/id-convert.pipe';
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SearchComponentComponent,
-    FilterPokemonPipe,
-    DisplayComponentComponent,
-    WeightConvertKgPipe,
-    HeightConvertMeterPipe,
-    IdConvertPipe
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    NgxEchartsModule.forRoot({
-      echarts,
-    })
-  ],
-  providers: [
-    PokeApiService,
-    PokeSelectionService
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        SearchComponentComponent,
+        FilterPokemonPipe,
+        DisplayComponentComponent,
+        WeightConvertKgPipe,
+        HeightConvertMeterPipe,
+        IdConvertPipe
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        NgxEchartsModule.forRoot({
+            echarts,
+        })], providers: [
+        PokeApiService,
+        PokeSelectionService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
