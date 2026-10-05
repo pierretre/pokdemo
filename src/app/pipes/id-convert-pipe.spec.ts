@@ -1,4 +1,4 @@
-import { IdConvertPipe } from './id-convert.pipe';
+import { IdConvertPipe } from './id-convert-pipe';
 
 describe('IdConvertPipe', () => {
   it('create an instance', () => {

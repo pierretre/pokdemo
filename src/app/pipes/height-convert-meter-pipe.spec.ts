@@ -1,4 +1,4 @@
-import { HeightConvertMeterPipe } from './height-convert-meter.pipe';
+import { HeightConvertMeterPipe } from './height-convert-meter-pipe';
 
 describe('HeightConvertMeterPipe', () => {
   it('create an instance', () => {

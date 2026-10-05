@@ -1,8 +1,11 @@
-import { provideZoneChangeDetection } from "@angular/core";
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { provideEchartsCore } from 'ngx-echarts';
+import { App } from './app/app';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule, { applicationProviders: [provideZoneChangeDetection()], })
-  .catch(err => console.error(err));
+bootstrapApplication(App, {
+  providers: [
+    provideHttpClient(),
+    provideEchartsCore({ echarts: () => import('echarts') })
+  ]
+}).catch((e) => console.error(e));

@@ -15,16 +15,15 @@
     "@angular/compiler": "^22.2.1",
     "@angular/core": "^22.2.1",
     "@angular/forms": "^22.2.1",
-    "@angular/cdk": "^20.2.14",
-    "@angular/material": "^20.2.14",
+    "@angular/cdk": "^22.2.1",
+    "@angular/material": "^22.2.1",
     "@angular/platform-browser": "^22.2.1",
     "@angular/platform-browser-dynamic": "^22.2.1",
     "@angular/router": "^22.2.1",
     "echarts": "^5.4.3",
     "ngx-echarts": "^17.1.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.1"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^22.2.1",

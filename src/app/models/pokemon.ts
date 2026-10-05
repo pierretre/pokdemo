@@ -1,9 +1,12 @@
 export class Pokemon {
-    id: string;
-    nom: string;
+  height = 0;
+  weight = 0;
+  sprites: { front_default: string | null } = { front_default: null };
+  types: { type: { name: string } }[] = [];
+  stats: { base_stat: number; stat: { name: string } }[] = [];
 
-    constructor(id: string, nom: string){
-        this.id = id;
-        this.nom = nom;
-    }
+  constructor(
+    public id: string,
+    public name: string,
+  ) { }
 }

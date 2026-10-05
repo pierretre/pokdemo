@@ -1,0 +1,15 @@
+<div class="search-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Search (id or name)</mat-label>
+    <input matInput type="text" [(ngModel)]="store.search">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Pokémon</mat-label>
+    <select matNativeControl [ngModel]="store.selectedId()" (ngModelChange)="store.select($event)">
+      @for (pokemon of store.pokedex.value() | filterPokemonPipe : store.search(); track pokemon.id) {
+        <option [value]="pokemon.id">{{ pokemon.id | idConvert }}⠀⠀{{ pokemon.name }}</option>
+      }
+    </select>
+  </mat-form-field>
+</div>

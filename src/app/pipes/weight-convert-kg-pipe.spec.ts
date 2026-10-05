@@ -1,4 +1,4 @@
-import { WeightConvertKgPipe } from './weight-convert-kg.pipe';
+import { WeightConvertKgPipe } from './weight-convert-kg-pipe';
 
 describe('WeightConvertKgPipe', () => {
   it('create an instance', () => {
