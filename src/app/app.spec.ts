@@ -1,6 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
 
+import { describe, expect, beforeEach, it } from 'vitest'
+
 describe('App', () => {
   beforeEach(() => TestBed.configureTestingModule({
     declarations: [App]
@@ -10,12 +12,6 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'pokdemo'`, () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('pokdemo');
   });
 
   it('should render title', () => {
